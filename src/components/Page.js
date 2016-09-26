@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Page = ({ pathname, params }) => (
-  <h2>Page {params.id}!</h2>
+  <h1>Page {params.id}!</h1>
 )
 
 
