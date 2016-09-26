@@ -4,6 +4,11 @@ import { Link } from 'react-router'
 class Sidebar extends Component {
   state = { expanded: false }
 
+  routes = [
+    { to: '/page/about', label: 'About' },
+    { to: '/page/contact', label: 'Contact' }
+  ]
+
   onClick() {
     this.setState({
       expanded: !this.state.expanded
@@ -18,14 +23,13 @@ class Sidebar extends Component {
         <nav className="local-nav" aria-label="main navigation" aria-expanded={expanded}>
           <ul>
             <li>
-              <Link to="/" className="is-active">Sample Routing</Link>
+              <Link to="/" className="is-active">Navigation</Link>
               <ul>
-                <li>
-                  <Link to="/page/1">Page One</Link>
-                </li>
-                <li>
-                  <Link to="/page/2">Page Two</Link>
-                </li>
+                {this.routes.map(({ to, label }, i) => (
+                  <li key={i}>
+                    <Link to={to}>{label}</Link>
+                  </li>
+                ))}
               </ul>
             </li>
           </ul>
