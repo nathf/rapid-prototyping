@@ -5486,10 +5486,3 @@ footer[role='contentinfo'] {
   h2, .display,
   h3 {
     page-break-after: avoid; } }
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif; }
-  body a {
-    color: green; }

@@ -1,14 +1,24 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import { BrowserRouter, Match, Miss } from 'react-router'
+import NoMatch from './components/NoMatch'
+import Page from './components/Page'
+import Home from './components/Home'
+import Sidebar from './components/Sidebar'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <BrowserRouter>
+        <main role="main">
+          <Sidebar />
+          <article>
+            <Match pattern="/" exactly component={Home} />
+            <Match pattern="/page/:id" component={Page} />
+            {/* If none of those match, then a sibling `Miss` will render. */}
+            <Miss component={NoMatch}/>
+          </article>
+        </main>
+      </BrowserRouter>
     );
   }
 }

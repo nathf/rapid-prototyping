@@ -1,12 +1,2 @@
 $gov-ui-kit-image-base-url: "https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/img/";
-@import "gov-au-ui-kit/assets/sass/ui-kit.scss";
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-
-  a {
-    color: green;
-  }
-}
+@import "gov-au-ui-kit/assets/sass/ui-kit";
