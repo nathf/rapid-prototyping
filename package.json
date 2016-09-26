@@ -1,0 +1,25 @@
+{
+  "name": "rapid-prototyping",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^2.2.0",
+    "gov-au-ui-kit": "git+https://github.com/nathf/gov-au-ui-kit.git#feature/node-install-issues",
+    "node-sass": "^3.9.3",
+    "react-scripts": "0.4.1"
+  },
+  "dependencies": {
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  },
+  "scripts": {
+    "start": "concurrently --kill-others 'npm run sass' 'react-scripts start'",
+    "sass": "node-sass --include-path=./node_modules src/index.scss -o src -w",
+    "build": "npm run sass && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/react-scripts/config/eslint.js"
+  }
+}
