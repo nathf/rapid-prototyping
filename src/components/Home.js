@@ -1,7 +1,11 @@
 import React from 'react'
+import ChangeName from '../containers/ChangeName'
 
 const Home = () => (
-  <h1>Home page</h1>
+  <div>
+    <h1>Home page</h1>
+    <ChangeName />
+  </div>
 )
 
 export default Home
