@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "concurrently": "^2.2.0",
-    "gov-au-ui-kit": "git+https://github.com/nathf/gov-au-ui-kit.git#feature/node-install-issues",
+    "gov-au-ui-kit": "AusDTO/gov-au-ui-kit.git#1.8.0",
     "node-sass": "^3.9.3",
     "react-scripts": "0.4.1"
   },
